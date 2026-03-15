@@ -1,10 +1,9 @@
 ---
+name: GLOBAL instructions
 applyTo: '**'
 ---
 
 # Global Tool & Interaction Standards
-
-BEFORE ANYTHING ELSE: If, and only if, a `./beads` folder exists, then run `bd onboard` and follow the instructions.
 
 ## 1. @workspace (Reasoning, Context & Fact-Checking)
 - **Zero Hallucination:** NEVER guess or provide information you are not certain about. If uncertain, state it. 
@@ -21,6 +20,7 @@ BEFORE ANYTHING ELSE: If, and only if, a `./beads` folder exists, then run `bd o
 - **GitHub Tasks:** Prioritize `gh` CLI commands for PRs, issues, and repo status.
 - **Forbidden Git:** NEVER use `git add .`, `git add -A`, `git push`, `git commit --amend`, `git reset --soft`, or `git reset --hard` unless explicitly commanded.
 - **Staging Files:** Prefer `git add -u` or `git add <files>`. Only stage when commanded.
+- **Commit Behavior:** If the user instructs you to stage and commit, do so once; thereafter do not auto-stage or auto-commit unless explicitly asked again.
 - **Path Safety:** NEVER specify drive letters (e.g., `Z:`, `C:`); use relative paths only.
 - **File Integrity:** Always use `git mv` for moving tracked files. NEVER recreate files when moving.
 - **Editing Style:** Edit files **inline**; NEVER use `cat` or redirection for modification or appending.
@@ -41,12 +41,7 @@ BEFORE ANYTHING ELSE: If, and only if, a `./beads` folder exists, then run `bd o
 - **Consolidation:** Do not create multiple documents when a single summary or status file will suffice. Consolidate related information.
 - **Comments:** Preserve existing comments. Document new functions briefly (purpose/inputs/outputs). Summarize complex functions (>20 lines).
 
-## 6. Numbering Convention (Documentation & GitHub References)
-- **GitHub Issues Only:** Use `#XXXX` format EXCLUSIVELY for GitHub issue tracker references.
-- **Local Documentation:** For local lists, documentation, problems, or comments, use `No. 1`, `Number 1`, `Issue A`, or `Item # 1` (with spacing).
-- **Consistency:** Apply uniformly across documentation, commit messages, and code comments to avoid confusion with tracker references.
-
-## 7. Interaction Style
+## 6. Interaction Style
 - **Brevity & Balance:** Prioritize concise, direct responses. Avoid conversational filler.
 - **Value-Driven Detail:** Provide deep technical detail ONLY when essential for complex logic or identifying risks.
 - **Action-Oriented:** Lead with actionable code, terminal commands, or direct answers rather than introductory summaries.
