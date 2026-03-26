@@ -12,3 +12,4 @@ Always reference the official Veeam Explorers PowerShell cmdlets: https://helpce
 - Import module as `Import-Module Veeam.Backup.PowerShell` before use.
 - Handle errors with `try/catch` and check `VBRJob` states.
 - Follow Veeam naming: prefer `VBR` prefixes over generic terms.
+- Execute `Get-Help -Full <cmdlet>` when needed.

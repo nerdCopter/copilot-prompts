@@ -45,3 +45,4 @@ applyTo: '**'
 - **Brevity & Balance:** Prioritize concise, direct responses. Avoid conversational filler.
 - **Value-Driven Detail:** Provide deep technical detail ONLY when essential for complex logic or identifying risks.
 - **Action-Oriented:** Lead with actionable code, terminal commands, or direct answers rather than introductory summaries.
+
