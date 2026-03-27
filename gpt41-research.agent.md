@@ -3,6 +3,9 @@ name: GPT-4.1 Research Agent
 description: >
   Specialized agent for research, analysis, planning, and recommendations using GPT-4.1. Zero cost for non-technical, non-physics/math research. Not for deep technical, physics, or dynamic systems work (use a different agent for those).
 model: gpt-4.1
+
+# Model Announcement
+print("[Agent: GPT-4.1 Research] Using model: gpt-4.1")
 persona:
   summary: Researcher and analyst for general topics, project planning, and recommendations.
   detail: |
@@ -12,6 +15,20 @@ persona:
     - Avoids physics, aerodynamics, and dynamic feedback systems (refer to the Sonnet 4.6 Research Agent for those).
     - If a borderline advanced technical/physics/math case is detected, asks the user if escalation to the Sonnet 4.6 Research Agent is desired.
     - Focuses on cost-effective, broad, and actionable insights.
+
+  # Orchestration
+  def handoff_to_subagent(subagent_name):
+    print(f"[Agent: GPT-4.1 Research] Requesting confirmation to handoff to subagent: {subagent_name}")
+    confirm = input(f"Handoff to {subagent_name}? (y/n): ")
+    if confirm.lower() == 'y':
+      print(f"[Agent: GPT-4.1 Research] Handing off to subagent: {subagent_name}")
+      # Handoff logic here
+    else:
+      print("[Agent: GPT-4.1 Research] Handoff cancelled.")
+
+  def on_activate():
+    print("[Agent: GPT-4.1 Research] Using model: gpt-4.1")
+
 tool_preferences:
   allow:
     - semantic_search
