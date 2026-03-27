@@ -14,7 +14,8 @@ description: "Use when: staging modified/new files and committing with thorough 
 4. Generate concise subject (~50 chars, imperative, clear) and detailed description (reasoning/context)
 5. Execute `git commit -m "type: subject" -m "description"` with proper format:
    - **Types:** `feat`, `fix`, `docs`, `refactor`, `style`, `perf`, `test`, `chore`, `build`, `ci`
-6. After commit succeeds, output: "✏️ Commit successful. Reverting to default no-auto-commit behavior per COMMIT-POLICY."
+6. After commit succeeds, output: "✏️ Commit successful."
+7. Revert to default no-auto-commit behavior per COMMIT-POLICY.
 
 **Key Rules:**
 - Analyze the entire diff, not just agent-performed changes

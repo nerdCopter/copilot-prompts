@@ -16,32 +16,29 @@ applyTo: '**'
 - **Pre-Work Enumeration:** Before starting, enumerate ALL feedback items (with line numbers/sections) to confirm the full scope.
 - **Batching:** Group related changes into single commits and execute everything in a single pass to ensure cost efficiency.
 
-## 3. @terminal (Git, File Ops & GitHub CLI)
+## 3. **Commit, staging, and commit agent workflows are governed by the following authoritative files:**
+- See [COMMIT-POLICY.instructions.md](COMMIT-POLICY.instructions.md) for all commit and staging rules.
+- See [commit.agent.md](commit.agent.md) for the commit agent workflow and requirements.
+All commit/staging/agent actions must comply with these files. Do not duplicate or override their rules here.
+
+## 4. Terminal & Git Standards (@terminal)
 - **GitHub Tasks:** Prioritize `gh` CLI commands for PRs, issues, and repo status.
-- **Forbidden Git:** NEVER use `git add .`, `git add -A`, `git push`, `git commit --amend`, `git reset --soft`, or `git reset --hard` unless explicitly commanded.
-- **Staging Files:** Prefer `git add -u` or `git add <files>`. Only stage when commanded.
-- **Commit Behavior:** If the user instructs you to stage and commit, do so once; thereafter do not auto-stage or auto-commit unless explicitly asked again.
+- **PRs:** NEVER create pull requests unless explicitly requested.
+- **Forbidden Git:** NEVER use `git push`, `git commit --amend`, `git reset --soft`, or `git reset --hard` unless explicitly commanded.
 - **Path Safety:** NEVER specify drive letters (e.g., `Z:`, `C:`); use relative paths only.
 - **File Integrity:** Always use `git mv` for moving tracked files. NEVER recreate files when moving.
-- **Editing Style:** Edit files **inline**; NEVER use `cat` or redirection for modification or appending.
+- **Editing Style:** Prefer editing files **inline**.
 - **Shell Syntax:** Avoid `2>&1` or `&&` unless strictly required for the logic.
-- **PRs:** NEVER create pull requests unless explicitly requested.
 
-### Commit Standard (Required)
-- **Workflow:** Analyze `git diff --cached` or `git diff HEAD` before generating messages.
-- **Command:** `git commit -m "<type>: <subject>" -m "<description>"`
-- **Constraints:** Subject-case, ~50 chars max, clear/actionable. Description on a separate line with context/reasoning.
-- **Allowed Types:** `feat`, `fix`, `docs`, `refactor`, `style`, `perf`, `test`, `chore`, `build`, `ci`.
-
-## 4. @GitHub MCP (Advanced API)
+## 5. @GitHub MCP (Advanced API)
 - Use **GitHub MCP Server** tools (e.g., `get_pull_request`, `search_code`) when the local `gh` CLI is insufficient for deep repository analysis or cross-repo data fetching.
 
-## 5. General Standards & Documentation
+## 6. General Standards & Documentation
 - **Environment:** Create ALL non-source temporary files, summaries, and analysis in `./tmp/`.
 - **Consolidation:** Do not create multiple documents when a single summary or status file will suffice. Consolidate related information.
 - **Comments:** Preserve existing comments. Document new functions briefly (purpose/inputs/outputs). Summarize complex functions (>20 lines).
 
-## 6. Interaction Style
+## 7. Interaction Style
 - **Brevity & Balance:** Prioritize concise, direct responses. Avoid conversational filler.
 - **Value-Driven Detail:** Provide deep technical detail ONLY when essential for complex logic or identifying risks.
 - **Action-Oriented:** Lead with actionable code, terminal commands, or direct answers rather than introductory summaries.
