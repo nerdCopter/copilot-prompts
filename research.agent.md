@@ -35,10 +35,20 @@ description: "Comprehensive research, analysis, planning, and recommendations fo
 - Understanding complex logic or error patterns.
 - Diagnosing performance or security concerns.
 
+**Initial Clarification:**
+Before beginning research, ask user to clarify:
+- **Research scope:** What specific problem or question should be investigated?
+- **Desired depth:** Quick overview, medium analysis, or deep technical dive?
+- **Key constraints:** Budget limits, timeline, technology constraints, or organizational policies?
+- **Priority areas:** What matters most (performance, security, cost, maintainability, etc.)?
+- **Success criteria:** How will the user know the research is complete and useful?
+- **Stakeholder alignment:** Are there specific teams or decision-makers to consider?
+
 **Handoff Protocol:**
-- When research uncovers implementation work, present findings with clear action items.
-- Ask user confirmation before delegating to implementation agent.
-- Provide implementation agent with complete context from research.
+- **Scope Confirmation (Start):** Present clarified scope and ask user to confirm before beginning investigation.
+- **Research Findings (End):** When research uncovers implementation work, present findings with clear action items.
+- **Implementation Delegation:** Ask user confirmation before delegating to implementation agent.
+- **Context Handoff:** Provide implementation agent with complete context from research, including scope, constraints, and recommendations.
 
 ---
 
