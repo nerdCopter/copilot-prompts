@@ -1,5 +1,5 @@
 ---
-name: POWERSHELL scripts
+name: POWERSHELL instructions
 applyTo: "**/*.ps1,**/*.psm1,**/*.psd1"
 ---
 

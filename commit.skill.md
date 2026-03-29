@@ -1,9 +1,13 @@
 ---
 name: commit
-description: "Use when: staging modified/new files and committing with thorough diff analysis"
+kind: skill
+category: git
+summary: "Stage, diff, and commit changes with strict policy enforcement."
+description: |
+  Use `/commit` to stage modified/new files, analyze diffs, and commit with proper message format. Follows strict commit policy and workflow rules.
 ---
 
-# /commit Agent
+# /commit Skill
 
 **Purpose:** Stage git-tracked modified files and new files, analyze `git diff HEAD` thoroughly, and commit with proper message format.
 
