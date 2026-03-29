@@ -1,20 +1,31 @@
 ## AGENTS.md
 
-**To print the current instruction sets, agents, and skills (with their slash-commands) in this chat session:**
+**Current active agents, skills, and instructions for this workspace:**
 
-> **Prompt Copilot (GPT-4.1 or newer) with:**
->
-> "List all instruction sets, agents, and skills for this workspace, and print the slash-command to activate each agent or skill."
+### Agents
+Invoke with `/agent-name` in chat:
+- `/research` — Comprehensive research, analysis, planning, and recommendations
+- `/implementation` — Safe, best-practices implementation specialist for all code tasks
 
-- **Instruction Sets:**
-    - _Auto-applied by file type or context. No slash-command needed._
+### Skills
+Invoke with `/skill-name` in chat:
+- `/commit` — Git commit workflow with staging and message management
 
-- **Agents:**
-    - _Activate with:_ `/[agent-name]`  
-        _(e.g., `/commit`, `/gpt41-implementation`, `/sonnet46-research`)_
+### Instructions (Auto-applied)
+Applied automatically based on file type matching (`applyTo` pattern):
+- `GLOBAL.instructions.md` — Universal standards (all files)
+- `LUAU.instructions.md` — Roblox Luau scripting standards (`**/*.lua`, `**/*.luau`)
+- `RUST.instructions.md` — Rust conventions and best practices (`**/*.rs`, `**/*.toml`)
+- `POWERSHELL.instructions.md` — PowerShell scripting standards (`**/*.ps1`, `**/*.psm1`, `**/*.psd1`)
+- `YARN.instructions.md` — Yarn/npm best practices (`**/package.json`)
+- `MARKDOWN.instructions.md` — Documentation and TOC standards (`**/*.md`)
+- `VEEAM.instructions.md` — Veeam PowerShell scripting (Veeam-PowerShell/**/*.ps{1,m1})
 
-- **Skills:**
-    - _Activate with:_ `/skill [skill-name]`  
-        _(e.g., `/skill agent-customization`)_
+### Prompts (Referenced by agents)
+Not directly invoked; used as discipline/philosophy context:
+- `implementation-specialist.prompt.md` — Implementation discipline and scope creep warnings
+- `msdocs-assistant.prompt.md` — Microsoft Docs search and PowerShell validation
 
-> _This file is intentionally dynamic. Use the above Copilot prompt to always get the live, agentic list for this workspace in chat._
+---
+
+**See [README.md](README.md) for quick reference on agents, skills, and auto-applied instructions.**
