@@ -1,2 +1,3 @@
 # Ignore local backup folders for prompt overrides
 backups/
+.agent-model-backup.json
