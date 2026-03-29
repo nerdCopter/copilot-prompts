@@ -22,7 +22,7 @@ These standards apply to all work. This file auto-loads with every message; inst
 - **Completeness:** When user mentions "feedback", "issues", "comments", or "nitpicks", implement ALL in one response.
 - **Equal Treatment:** Treat all feedback equally—nitpicks matter as much as actionable items.
 - **Pre-Work Enumeration:** Before starting, enumerate ALL feedback items (with line/section refs) to confirm scope.
-- **Batching:** Group related changes into single commits; execute everything at once for cost efficiency.
+- **Batching:** Process all feedback items in one response without intermediate user interactions. Commit incrementally per concern (small, focused commits—not one monolithic commit).
 
 ---
 
@@ -46,7 +46,7 @@ These standards apply to all work. This file auto-loads with every message; inst
 ## File & Documentation Standards
 
 - **Temporary files:** `./tmp/` only
-- **Consolidation:** Single document > multiple redundant files
+- **Consolidation:** Prefer one consolidated file over multiple fragmented files.
 - **Comments:** Preserve existing. Document new functions briefly (purpose/inputs/outputs). Summarize complex (>20 lines).
 
 ---
