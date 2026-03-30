@@ -48,6 +48,7 @@ These standards apply to all work. This file auto-loads with every message; inst
 - **Temporary files:** `./tmp/` only
 - **Consolidation:** Prefer one consolidated file over multiple fragmented files.
 - **Comments:** Preserve existing. Document new functions briefly (purpose/inputs/outputs). Summarize complex (>20 lines).
+- **No Emoji/Icons in Source Code:** Never use emoji or icons in any source code (including comments, variable names, or output), except where explicitly allowed in language-specific instructions. See MARKDOWN.instructions.md for Markdown exceptions.
 
 ---
 

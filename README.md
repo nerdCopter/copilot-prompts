@@ -44,3 +44,13 @@ Auto-applied to matching files — **no invocation needed**:
 **Instructions:**
 - Applied automatically when editing matching file types
 - No action needed; Copilot automatically follows these standards
+
+---
+
+## Recommended Locations
+
+| Platform | Path |
+|---|---|
+| Linux | `~/.config/Code/User/prompts/` |
+| Windows | `%APPDATA%\Code\User\prompts\` |
+| macOS | `~/Library/Application Support/Code/User/prompts/` |

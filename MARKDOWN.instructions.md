@@ -7,8 +7,9 @@ applyTo: '**/*.md'
 
 ### **A. General Documentation Principles**
 
-* **Brevity and Minimization:** **Do not create superfluous quantities of new documentation.** Attempt to keep documentation to a minimum, focusing on essential information and avoiding redundant files or overly verbose explanations.
-* **TOC Requirement:** **When documentation has 5 or more sections (headers), always maintain a Table of Contents (TOC)** at the top of the document to improve navigation and readability.
+ - **Brevity and Minimization:** **Do not create superfluous quantities of new documentation.** Attempt to keep documentation to a minimum, focusing on essential information and avoiding redundant files or overly verbose explanations.
+ - **TOC Requirement:** **When documentation has 5 or more sections (headers), always maintain a Table of Contents (TOC)** at the top of the document to improve navigation and readability.
+ - **Emoji/Icons Usage:** Emoji and icons are allowed only when they enhance clarity or effectiveness of information (e.g., checkmarks, X marks, eraser/delete). Use sparingly and only when they add value. Avoid decorative or excessive emoji/icons.
 
 ---
 
@@ -34,6 +35,6 @@ Content for Introduction...
 
 ### **C. Numbering & Reference Style**
 
-* **Avoid `#XXXX`** for local documentation numbering (it looks like GitHub issue references).
-* For local lists, use **`No. 1`**, **`Number 1`**, **`Issue A`**, or **`Item # 1`** (with spacing).
-* Use `#1234` only when referencing an actual GitHub issue or PR.
+ - **Avoid `#XXXX`** for local documentation numbering (it looks like GitHub issue references).
+ - For local lists, use **`No. 1`**, **`Number 1`**, **`Issue A`**, or **`Item # 1`** (with spacing).
+ - Use `#1234` only when referencing an actual GitHub issue or PR.
