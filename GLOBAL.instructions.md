@@ -5,6 +5,9 @@ applyTo: '**'
 
 # Global Standards
 
+**[Enforcement Notice]** When these standards are applied, announce: "Global standards enforced: zero hallucination, verification-first approach, feedback-driven execution."
+
+
 These standards apply to all work. This file auto-loads with every message; instructions persist across sessions and are re-evaluated with each request.
 
 ---

@@ -12,6 +12,7 @@ description: |
 **Purpose:** Stage git-tracked modified files and new files, analyze `git diff HEAD` thoroughly, and commit with proper message format.
 
 **Workflow:**
+0. **Announce:** Upon invocation, announce: "/commit skill activated: staging, diff analysis, and commit with strict policy enforcement."
 1. Run `git status --porcelain` to identify modified tracked files and untracked files (respects `.gitignore`)
 2. Stage tracked changes with `git add -u`; for new files, ask user or auto-stage if explicitly listed — **never use `git add .` or `git add -A`**
 3. Run `git diff HEAD` and analyze the full changeset (not just recent edits)

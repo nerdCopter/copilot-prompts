@@ -3,6 +3,9 @@ applyTo: "**/*.{rs,toml}"
 ---
 # Rust Architectural & Tool Standards
 
+**[Enforcement Notice]** When these standards are applied, announce: "Rust standards enforced: library-first architecture, zero-warning tolerance, cargo validation required."
+
+
 ## 1. Tool Calling Logic (@terminal)
 - **Validation Order:** Before any commit or after significant changes, execute:
   1. `cargo clippy --all-targets --all-features -- -D warnings` (Zero-warning tolerance).

@@ -1,0 +1,38 @@
+
+# Acceptable .md File Types in ~/.config/Code/User/prompts/ (Copilot/Agent System)
+
+## 1. `.instructions.md`
+**Purpose:** Instruction set, auto-applied by file pattern.
+**Front-matter (YAML) options:**
+- `name` (string): Human-readable name.
+- `applyTo` (string): Glob pattern for file matching (**required**).
+- `description` (string, optional): Short summary.
+- Any other fields are ignored.
+
+## 2. `.skill.md`
+**Purpose:** Defines a skill, invokable via `/skill-name`.
+**Front-matter options:**
+- `name` (string): Skill name (**required**).
+- `kind` (string): Must be "skill" (**required**).
+- `category` (string, optional): Category label.
+- `summary` (string, optional): Short summary.
+- `description` (string, optional): Detailed description.
+- Any other fields are ignored.
+
+## 3. `.agent.md`
+**Purpose:** Defines an agent, invokable via `/agent-name`.
+**Front-matter options:**
+- `name` (string): Agent name (**required**).
+- `description` (string): Agent summary (**required**).
+- Any other fields are ignored.
+
+## 4. `.prompt.md`
+**Purpose:** Prompt template for agent/skill behavior.
+**Front-matter options:**
+- `name` (string, optional): Prompt name.
+- `description` (string, optional): Prompt summary.
+- Any other fields are ignored.
+
+## 5. Documentation Files (`README.md`, `AGENTS.md`, etc.)
+**Purpose:** Human-readable documentation only.
+**Front-matter:** Not required or used.

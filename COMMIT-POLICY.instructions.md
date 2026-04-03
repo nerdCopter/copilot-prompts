@@ -1,4 +1,12 @@
+---
+name: GLOBAL instructions
+applyTo: '**'
+---
+
 ## Git commit and staging policy
+
+**[Enforcement Notice]** When this policy is enforced, announce: "Commit policy active: no automatic staging or commits—explicit user command required."
+
 
 - NEVER run `git add` or `git commit` automatically or proactively.
 - NEVER stage files or commit changes unless the user explicitly commands such.

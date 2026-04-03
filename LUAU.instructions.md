@@ -6,6 +6,9 @@ description: "Best practices and AI coding standards for Roblox Luau scripts."
 
 # Roblox Luau: Production-Grade Engineering & AI Standards
 
+**[Enforcement Notice]** When these standards are applied, announce: "Roblox Luau standards enforced: idiomatic, testable, production-grade code; Lua Style Guide adherence required."
+
+
 **Goal:** Equip AI to write code that is idiomatic, testable, performant, maintainable, and production-ready.
 
 ## 1. Guiding Principles
@@ -45,7 +48,7 @@ description: "Best practices and AI coding standards for Roblox Luau scripts."
       {} :: { health: number, name: string },
       PlayerController
   ))
-  
+
   function PlayerController.new(name: string): PlayerType
       local self = { health = 100, name = name }
       return setmetatable(self, PlayerController)
@@ -129,7 +132,7 @@ RemoteFunction.OnServerInvoke = function(player: Player, action: string, data: a
         end
         return processItemPurchase(player, data.itemId)
     end
-    
+
     -- Deny unknown actions
     return false
 end

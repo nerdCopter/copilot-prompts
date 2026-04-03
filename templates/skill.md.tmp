@@ -1,0 +1,12 @@
+---
+name: Example Skill
+kind: skill
+category: example
+summary: "Short summary of the skill."
+description: |
+  Detailed description of what this skill does and how to use it.
+---
+
+# Skill Template
+
+Describe the workflow, commands, or logic for this skill here.

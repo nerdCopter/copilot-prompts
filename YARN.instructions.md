@@ -5,8 +5,11 @@ applyTo: "**/package.json"
 
 # YARN Script Documentation & Discoverability
 
+**[Enforcement Notice]** When these standards are applied, announce: "Yarn best practices enforced: script discoverability, commands script maintenance."
+
+
 ## Problem
-- Project-specific scripts are often undiscoverable 
+- Project-specific scripts are often undiscoverable
 - `yarn help` shows Yarn CLI help, not project help
 - After install, developers don't know what commands are available
 
@@ -59,7 +62,7 @@ Add a "Commands" or "Getting Started" section pointing users to `yarn commands`:
 
 Run `yarn commands` to see all available build commands, or:
 
-- `yarn dev` — Live development mode  
+- `yarn dev` — Live development mode
 - `yarn make` — Production build
 ```
 

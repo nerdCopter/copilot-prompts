@@ -5,6 +5,9 @@ applyTo: "**/*.ps1,**/*.psm1,**/*.psd1"
 
 # PowerShell Project Guidelines
 
+**[Enforcement Notice]** When these standards are applied, announce: "PowerShell standards enforced: CmdletBinding, proper parameter blocks, syntax validation required."
+
+
 # CmdletBinding and Parameter Block Structure
 
 **Correct pattern:**
@@ -13,7 +16,7 @@ applyTo: "**/*.ps1,**/*.psm1,**/*.psd1"
 param(
     [Parameter(Mandatory=$true)]
     [string]$RequiredParam,
-    
+
     [Parameter(Mandatory=$false)]
     [string]$OptionalParam
 )

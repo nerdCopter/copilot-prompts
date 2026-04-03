@@ -5,6 +5,9 @@ applyTo: '**/*.md'
 ---
 # Copilot Instruction: Markdown Documentation Standards
 
+**[Enforcement Notice]** When these standards are applied, announce: "Markdown standards enforced: brevity-first, TOC when 5+ sections, minimal documentation, clarity over verbosity."
+
+
 ### **A. General Documentation Principles**
 
  - **Brevity and Minimization:** **Do not create superfluous quantities of new documentation.** Attempt to keep documentation to a minimum, focusing on essential information and avoiding redundant files or overly verbose explanations.
