@@ -6,6 +6,7 @@
 Invoke with `/agent-name` in chat:
 - `/research` — Comprehensive research, analysis, planning, and recommendations
 - `/implementation` — Safe, best-practices implementation specialist for all code tasks
+- `/msdocs-assistant` — Microsoft Docs search and PowerShell validation
 
 ### Skills
 Invoke with `/skill-name` in chat:
@@ -24,7 +25,6 @@ Applied automatically based on file type matching (`applyTo` pattern):
 ### Prompts (Referenced by agents)
 Not directly invoked; used as discipline/philosophy context:
 - `implementation-specialist.prompt.md` — Implementation discipline and scope creep warnings
-- `msdocs-assistant.prompt.md` — Microsoft Docs search and PowerShell validation
 
 ---
 

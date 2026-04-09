@@ -1,0 +1,28 @@
+## Rewriting "Do Not" Statements for Claude
+
+The core principle: Anthropic officially endorses reframing negative instructions as positive, explicit commands — tell Claude what to do instead of what not to do. Research on "Pink Elephant" instructions shows that telling an advanced model not to think about something can actually increase the likelihood it focuses on it.
+
+---
+
+### Common Rewrites
+
+| ❌ Negative (avoid) | ✅ Positive (preferred) |
+|---|---|
+| "Do not break working code" | "Preserve all existing functionality; only modify the specific code requested" |
+| "No breaking functionality" | "Keep all current behaviors intact; limit changes to the stated scope" |
+| "Do not modify files you weren't asked to change" | "Edit only the files explicitly referenced in the task" |
+| "Do not add features" | "Implement only what was requested; scope is limited to this task" |
+| "Do not refactor" | "Leave surrounding code exactly as-is; make the minimum change needed" |
+| "If in doubt, don't change it" | *(Remove entirely — per the slide, "if in doubt" patterns cause overtriggering)* |
+
+---
+
+### The Pattern
+
+Instead of: *"Do not write long, fluffy introductions"* — use: *"Start directly with the core argument."*
+
+The formula is: **state the desired behavior + explain why** (per the slide's second bullet):
+
+> "Preserve all existing functionality because this code is in production — only touch the lines specified."
+
+Providing context or motivation behind instructions helps Claude models better generalize the intent.
