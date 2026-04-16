@@ -22,6 +22,11 @@ param(
 )
 ```
 
+**Common parameters and WhatIf support:**
+- Use `[CmdletBinding(SupportsShouldProcess=$true)]` when the script should support `-WhatIf` and `-Confirm`.
+- Common parameters are automatically available in advanced scripts, but detecting whether `-WhatIf` was explicitly provided should be done via `$PSBoundParameters.ContainsKey('WhatIf')`.
+- Do not rely on `$WhatIfPreference` to detect explicit parameter binding; it reflects the current session preference and not whether `-WhatIf` was passed to the script.
+
 **NEVER nest parameters inside CmdletBinding() closing:**
 ```powershell
 # WRONG - causes "Missing closing parenthesis" parse errors
