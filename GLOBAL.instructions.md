@@ -33,7 +33,7 @@ These standards apply to all work. This file auto-loads with every message; inst
 
 **All rules are in:**
 - [COMMIT-POLICY.instructions.md](COMMIT-POLICY.instructions.md) — Commit behavior, staging, forbidden commands
-- [commit.agent.md](commit.agent.md) — Commit workflow and agent requirements
+- [commit.skill.md](commit.skill.md) — Commit workflow and agent requirements
 
 **Refer to these; do not override their rules.**
 
