@@ -49,8 +49,66 @@ Auto-applied to matching files — **no invocation needed**:
 
 ## Recommended Locations
 
-| Platform | Path |
-|---|---|
-| Linux | `~/.config/Code/User/prompts/` |
-| Windows | `%APPDATA%\Code\User\prompts\` |
-| macOS | `~/Library/Application Support/Code/User/prompts/` |
+| Platform | VS Code Path | Claude Code Path* |
+|---|---|---|
+| Linux | `~/.config/Code/User/prompts/` | `~/.claude/` |
+| Windows | `%APPDATA%\Code\User\prompts\` | `%LOCALAPPDATA%\Claude\` |
+| macOS | `~/Library/Application Support/Code/User/prompts/` | `~/Library/Application Support/Claude/` |
+
+*Use the `claude-link-*` scripts to create symlinks in Claude Code directories.
+
+---
+
+## Installation
+
+### Quick Setup (Recommended)
+
+When you clone this repository, use these scripts to install the files to their proper locations:
+
+#### Linux
+```bash
+./scripts/install-linux.sh
+```
+Copies files to: `~/.config/Code/User/prompts/`
+
+#### macOS
+```bash
+./scripts/install-macos.sh
+```
+Copies files to: `~/Library/Application Support/Code/User/prompts/`
+
+#### Windows
+**PowerShell (Recommended):**
+```powershell
+.\scripts\install-windows.ps1
+```
+
+**Batch:**
+```cmd
+scripts\install-windows.bat
+```
+Copies files to: `%APPDATA%\Code\User\prompts\`
+
+---
+
+## Claude Code Integration
+
+For Claude Code integration, use the claude-link scripts to create symlinks:
+
+#### Linux
+```bash
+./scripts/claude-link-linux.sh
+```
+Creates symlinks in: `~/.claude/`
+
+#### macOS
+```bash
+./scripts/claude-link-macos.sh
+```
+Creates symlinks in: `~/Library/Application Support/Claude/`
+
+#### Windows
+```powershell
+.\scripts\claude-link-windows.ps1
+```
+Creates symlinks in: `%LOCALAPPDATA%\Claude\`
