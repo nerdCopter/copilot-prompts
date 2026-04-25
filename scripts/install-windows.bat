@@ -24,6 +24,10 @@ echo.
 
 REM robocopy: /E = recurse, /XD = exclude directories
 robocopy "%REPO_ROOT%" "%TARGET_DIR%" /E /XD scripts .git __pycache__ /NJH /NJS
+if %ERRORLEVEL% geq 8 (
+    echo ERROR: robocopy failed with exit code %ERRORLEVEL%. Check permissions or disk space.
+    exit /b %ERRORLEVEL%
+)
 
 echo.
 echo Installation complete!
