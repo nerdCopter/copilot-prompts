@@ -8,6 +8,16 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 TARGET_DIR="$HOME/Library/Application Support/Code/User/prompts"
 
+echo "This will copy files to: $TARGET_DIR"
+echo "WARNING: Existing files with the same name will be overwritten."
+echo ""
+read -r -p "Continue? [y/N] " confirm
+if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+  echo "Aborted."
+  exit 0
+fi
+echo ""
+
 echo "Installing Copilot customizations to $TARGET_DIR..."
 
 # Create target directory if it doesn't exist

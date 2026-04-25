@@ -1,38 +1,29 @@
 @echo off
 REM Installation script for Windows
-REM Copies tracked files to %APPDATA%\Code\User\prompts\
+REM Copies files to %APPDATA%\Code\User\prompts\
 
-setlocal enabledelayedexpansion
+setlocal
 
-set "REPO_ROOT=%~dp0.."
+REM Resolve repo root to absolute path
+pushd "%~dp0.."
+set "REPO_ROOT=%CD%"
+popd
+
 set "TARGET_DIR=%APPDATA%\Code\User\prompts"
 
 echo Installing Copilot customizations to %TARGET_DIR%...
-
-REM Create target directory if it doesn't exist
-if not exist "%TARGET_DIR%" mkdir "%TARGET_DIR%"
-
-REM Copy all files recursively, skipping scripts, .git, and __pycache__
-for /r "%REPO_ROOT%" %%F in (*) do (
-    set "FILE=%%F"
-    set "FILE=!FILE:%REPO_ROOT%\=!"
-    
-    REM Skip scripts, .git, __pycache__ directories
-    if "!FILE:scripts\=!" == "!FILE!" (
-        if "!FILE:.git\=!" == "!FILE!" (
-            if "!FILE:__pycache__\=!" == "!FILE!" (
-                set "DEST=%TARGET_DIR%\!FILE!"
-                
-                REM Create directory if needed
-                for %%D in ("!DEST!") do if not exist "%%~dpD" mkdir "%%~dpD"
-                
-                REM Copy file
-                copy /Y "%%F" "!DEST!" >nul
-                echo ✓ !FILE!
-            )
-        )
-    )
+echo This will copy files to: %TARGET_DIR%
+echo WARNING: Existing files with the same name will be overwritten.
+echo.
+set /p "CONFIRM=Continue? [y/N] "
+if /i not "%CONFIRM%" == "y" (
+    echo Aborted.
+    exit /b 0
 )
+echo.
+
+REM robocopy: /E = recurse, /XD = exclude directories
+robocopy "%REPO_ROOT%" "%TARGET_DIR%" /E /XD scripts .git __pycache__ /NJH /NJS
 
 echo.
 echo Installation complete!

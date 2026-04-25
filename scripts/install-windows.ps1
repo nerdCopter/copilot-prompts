@@ -16,6 +16,15 @@ if (-not $isAdmin) {
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $targetDir = Join-Path $env:APPDATA "Code\User\prompts"
 
+Write-Host "This will copy files to: $targetDir"
+Write-Host "WARNING: Existing files with the same name will be overwritten." -ForegroundColor Yellow
+Write-Host ""
+$confirm = Read-Host "Continue? [y/N]"
+if ($confirm -notmatch '^[Yy]$') {
+    Write-Host "Aborted."
+    exit 0
+}
+Write-Host ""
 Write-Host "Installing Copilot customizations to $targetDir..." -ForegroundColor Green
 
 # Create target directory if it doesn't exist
