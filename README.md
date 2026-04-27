@@ -31,6 +31,22 @@ Auto-applied to matching files — **no invocation needed**:
 
 ---
 
+## Commit Policy: No Auto-Commit by Default
+
+**This codebase enforces strict no-auto-commit behavior.** Agents and instructions explicitly forbid staging or committing changes unless you explicitly request it via the `/commit` skill.
+
+**Why?** Most AI agents auto-commit after tasks, bypassing user validation. This design inverts such. _You_ control when changes are staged and committed.
+
+**How to commit:**
+- Use `/commit` in chat to stage, analyze, and commit changes
+- After you invoke `/commit` once, the agent returns to no-auto-commit mode
+- For safer non-committal workflows, explicitly invoke the Implementation Agent
+- See [COMMIT-POLICY.instructions.md](COMMIT-POLICY.instructions.md) for full policy details
+
+⚠️  **Important:** This policy may not work consistently across all scenarios. The [Implementation Agent](implementation.agent.md) is specifically designed to reinforce no-auto-commit behavior when delegated tasks, but enforcement depends on proper agent invocation and instruction adherence. Consider using commands such as **"Enable Auto-Commit mode"** or **"Disable auto-commit mode"** to temporarily override the default behavior
+
+---
+
 ## How to Use
 
 **Agents:**
