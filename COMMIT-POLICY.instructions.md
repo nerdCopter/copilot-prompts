@@ -19,3 +19,8 @@ applyTo: '**'
 - Completing a task does NOT constitute permission to commit.
 - **Staging Files:** Prefer `git add -u` or `git add <files>`. Only stage when commanded. Never use `git add .` nor `git add -A`.
 - **Commit Behavior:** If the user instructs you to stage and commit, do so once; thereafter do not auto-stage or auto-commit unless explicitly asked again.
+
+### Message & comment standards:
+
+**Commits:** Describe what changed (from `git diff HEAD`); no AI attribution; use conventional format.
+**Code comments:** No PR/commit references; describe behavior only; ultra-concise.
