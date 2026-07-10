@@ -1,0 +1,3 @@
+# Private nerdCopter/EmuFlight/Betaflight skill mirror — symlinks into ~/.claude/skills.
+# Keep this repo generic/shareable; never let project-specific skill names leak into history.
+/nerdCopter/

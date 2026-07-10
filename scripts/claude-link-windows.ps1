@@ -19,7 +19,7 @@ $claudeDir = Join-Path $env:LOCALAPPDATA "Claude"
 
 # Define symlinks: @{ linkPath = "sourceFile" }
 $symlinks = @{
-    "CLAUDE.md" = "GLOBAL.instructions.md"
+    "AGENTS.md" = "GLOBAL.instructions.md"
     "commands\implementation.md" = "implementation.agent.md"
     "commands\commit.md" = "commit.skill.md"
     "commands\research.md" = "research.agent.md"
@@ -52,9 +52,15 @@ foreach ($linkName in $symlinks.Keys) {
     }
     
     if (Test-Path $linkPath) {
-        Remove-Item -Path $linkPath -Force
+        $existingItem = Get-Item $linkPath -Force
+        if ($existingItem.LinkType) {
+            Remove-Item -Path $linkPath -Force
+        } else {
+            Write-Host "⚠ Skipping $linkName : $linkPath exists and is not a symlink (refusing to overwrite a real file)" -ForegroundColor Yellow
+            continue
+        }
     }
-    
+
     # Create symbolic link
     New-Item -ItemType SymbolicLink -Path $linkPath -Target $promptPath -Force | Out-Null
     Write-Host "✓ $linkName -> $promptFile" -ForegroundColor Green
@@ -62,3 +68,4 @@ foreach ($linkName in $symlinks.Keys) {
 
 Write-Host ""
 Write-Host "All symlinks created successfully" -ForegroundColor Green
+Write-Host "Note: AGENTS.md links to the generic GLOBAL.instructions.md and won't overwrite an existing CLAUDE.md. Rename or copy it to CLAUDE.md yourself if you want to adopt it, or reference it directly from your CLAUDE.md instead." -ForegroundColor Cyan

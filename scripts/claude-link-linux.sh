@@ -6,7 +6,7 @@ CLAUDE_DIR="$HOME/.claude"
 
 # Array of symlinks: (link_path source_file)
 declare -a SYMLINKS=(
-  "CLAUDE.md:GLOBAL.instructions.md"
+  "AGENTS.md:GLOBAL.instructions.md"
   "commands/implementation.md:implementation.agent.md"
   "commands/commit.md:commit.skill.md"
   "commands/research.md:research.agent.md"
@@ -37,8 +37,11 @@ for entry in "${SYMLINKS[@]}"; do
     continue
   fi
 
-  if [ -e "$LINK_PATH" ] || [ -L "$LINK_PATH" ]; then
+  if [ -L "$LINK_PATH" ]; then
     rm "$LINK_PATH"
+  elif [ -e "$LINK_PATH" ]; then
+    echo "⚠ Skipping $LINK_NAME: $LINK_PATH exists and is not a symlink (refusing to overwrite a real file)"
+    continue
   fi
 
   ln -s "$PROMPT_PATH" "$LINK_PATH"
@@ -47,3 +50,4 @@ done
 
 echo ""
 echo "All symlinks created successfully"
+echo "Note: AGENTS.md links to the generic GLOBAL.instructions.md and won't overwrite an existing CLAUDE.md. Rename or copy it to CLAUDE.md yourself if you want to adopt it, or reference it directly from your CLAUDE.md instead."
