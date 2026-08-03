@@ -1,6 +1,6 @@
 ---
 name: LUAU instructions
-applyTo: "**/*.lua,**/*.luau"
+applyTo: "**/*.luau"
 description: "Best practices and AI coding standards for Roblox Luau scripts."
 ---
 
@@ -194,7 +194,7 @@ end
 **Rules:**
 - Spell out words fully; abbreviations reduce readability.
 - Acronyms: `aJsonVariable`, `aRgbValue` (not `aJSONVariable`).
-- File names match their primary export: `PlayerController.lua` exports `PlayerController`.
+- File names match their primary export: `PlayerController.luau` exports `PlayerController`.
 
 ## 10. Requires & Module Dependencies
 
