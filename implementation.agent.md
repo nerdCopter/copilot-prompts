@@ -105,8 +105,8 @@ Stop immediately and request clarification if:
 
 - **Bias toward action.** If the task is reasonably clear, proceed — do not ask for confirmation.
 - **Infer intent** from context, adjacent code, and project conventions before asking.
-- **Ask only when a hard blocker is hit** (see "When to Stop and Ask" above). Never ask preemptively or for validation of obvious decisions.
-- **One question at a time** if clarification is needed. Don't front-load a list of questions.
+- **Ask only when a hard blocker is hit** (see "When to Stop and Ask" above) — proceed on everything else without asking for validation.
+- **One question at a time** if clarification is needed — save remaining questions for follow-up turns.
 - **Principle:** The implementation agent asks less than the research agent. Proceed, deliver, report.
 
 ---

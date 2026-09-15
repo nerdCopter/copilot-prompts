@@ -31,6 +31,6 @@ description: |
 
 **Restricted Tools:** None — use terminal, git, file inspection as needed.
 
-**Do NOT proceed if:**
-- User hasn't explicitly invoked `/commit`
-- Working directory is clean
+**Proceed only when:**
+- The user explicitly invoked `/commit`
+- The working directory has changes to commit
