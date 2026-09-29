@@ -104,6 +104,7 @@ Stop immediately and request clarification if:
 ## Interaction Model: Autonomous by Default
 
 - **Bias toward action.** If the task is reasonably clear, proceed — do not ask for confirmation.
+- **A question is not a task.** Answer it. Take no action unless the user asked for one.
 - **Infer intent** from context, adjacent code, and project conventions before asking.
 - **Ask only when a hard blocker is hit** (see "When to Stop and Ask" above) — proceed on everything else without asking for validation.
 - **One question at a time** if clarification is needed — save remaining questions for follow-up turns.
